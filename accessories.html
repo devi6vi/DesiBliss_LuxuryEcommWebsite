@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accessories - DesiBliss</title>
+
+  <style>
+    body { font-family: Poppins; background:#F9F6F2; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: #1A1A1A;
+      color: white;
+      font-size: 21px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+
+    .item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    button {
+      background: #C9A96E;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <h2>DesiBliss</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="tops.html">Tops</a>
+    <a href="bottom.html">Bottoms</a>
+    <a href="accessories.html">Accessories</a>
+    <a href="dresses.html">Dresses</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</nav>
+
+<h1 style="text-align:center;">Tops</h1>
+
+
+<div class="grid">
+
+  <div class="item">
+    <img src="bluebangles.jpg" width="200px">
+    <h3>Beaded Bangles</h3>
+    <p>₹8,999</p>
+    <button onclick="addToCart('Accessories',8999)">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="beadedbeck.jpg" width="200px">
+    <h3>Beaded Necklace</h3>
+    <p>₹12,999</p>
+    <button onclick="addToCart('Accessories',12999)">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="beadedbag.jpg" width="200px">
+    <h3>Beaded Bag</h3>
+    <p>₹11,999</p>
+    <button onclick="addToCart('Accessories',11999)">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="jhumka1.jpg" width="200px">
+    <h3>Jhumka Earrings</h3>
+    <p>₹3,999</p>
+    <button onclick="addToCart('Accessories',3999)">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="waistchain.jpg" width="200px">
+    <h3>Waist Chain</h3>
+    <p>₹4,999</p>
+    <button onclick="addToCart('Accessories',4999)">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="jhumka3.jpg" width="200px">
+    <h3>Jhumka Earrings</h3>
+    <p>₹9,999</p>
+    <button onclick="addToCart('Accessories',9999)">Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img src="goldchudi.jpg" width="200px">
+    <h3>Gold Chudi</h3>
+    <p>₹5,999</p>
+    <button onclick="addToCart('Accessories',5999)">Add to Cart</button>
+  </div>
+
+   <div class="item">
+    <img src="desibag.jpg" width="200px">
+    <h3>Desi Mix Material Bag</h3>
+    <p>₹5,999</p>
+    <button onclick="addToCart('Accessories',5999)">Add to Cart</button>
+  </div>
+
+   <div class="item">
+    <img src="jhumka2.jpg" width="200px">
+    <h3>Jhumka Earrings</h3>
+    <p>₹8,999</p>
+    <button onclick="addToCart('Accessories',8999)">Add to Cart</button>
+  </div>
+
+</div>
+
+<script>
+function addToCart(name, price) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({name, price});
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart");
+}
+</script>
+
+</body>
+</html>
